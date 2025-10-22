@@ -1,103 +1,174 @@
-import Image from "next/image";
+import Header from "@/components/Header"
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="flex min-h-dvh flex-col">
+      {/* Header */}
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero */}
+      <section id="inicio" className="container mx-auto px-4 py-20 md:py-28">
+        <div className="grid items-center gap-8 md:grid-cols-2">
+          <div className="space-y-6">
+            <h1 className="text-3xl font-bold tracking-tight md:text-5xl">
+              Presença digital que impulsiona seu negócio
+            </h1>
+            <p className="text-muted-foreground text-lg">
+              Landing page rápida, moderna e objetiva. Sem banco de dados, sem
+              complicação: foco total na conversão.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild size="lg">
+                <Link href="#contato">Fale com a gente</Link>
+              </Button>
+              <Button asChild variant="ghost" size="lg">
+                <Link href="#servicos">Saiba mais</Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-md md:max-w-lg">
+            <div className="bg-card/50 grid aspect-video place-items-center rounded-lg border">
+              <Image
+                src="/window.svg"
+                alt="Demonstração"
+                width={320}
+                height={160}
+                className="opacity-90"
+              />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Benefícios */}
+      <section id="servicos" className="container mx-auto px-4 py-12 md:py-16">
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold md:text-3xl">
+            O que você recebe
+          </h2>
+          <p className="text-muted-foreground">
+            Essenciais para uma landing eficaz.
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="bg-card rounded-lg border p-5">
+            <Image src="/next.svg" alt="Performance" width={28} height={28} />
+            <h3 className="mt-4 font-semibold">Performance</h3>
+            <p className="text-muted-foreground">
+              Carregamento rápido com Next.js.
+            </p>
+          </div>
+          <div className="bg-card rounded-lg border p-5">
+            <Image src="/globe.svg" alt="Responsivo" width={28} height={28} />
+            <h3 className="mt-4 font-semibold">Responsivo</h3>
+            <p className="text-muted-foreground">
+              Perfeito em qualquer dispositivo.
+            </p>
+          </div>
+          <div className="bg-card rounded-lg border p-5">
+            <Image src="/file.svg" alt="SEO" width={28} height={28} />
+            <h3 className="mt-4 font-semibold">SEO básico</h3>
+            <p className="text-muted-foreground">
+              Estrutura pronta para indexação.
+            </p>
+          </div>
+          <div className="bg-card rounded-lg border p-5">
+            <Image src="/vercel.svg" alt="Deploy" width={28} height={28} />
+            <h3 className="mt-4 font-semibold">Deploy fácil</h3>
+            <p className="text-muted-foreground">
+              Pronto para publicar na Vercel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sobre */}
+      <section id="sobre" className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid items-start gap-8 md:grid-cols-2">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-semibold md:text-3xl">
+              Sobre a Pergom
+            </h2>
+            <p className="text-muted-foreground">
+              Criamos experiências digitais objetivas e alinhadas ao seu
+              posicionamento. Projetos simples, com foco em resultado e
+              manutenção fácil.
+            </p>
+            <p className="text-muted-foreground">
+              A landing page é ideal para campanhas, lançamentos e validações
+              rápidas — sem a complexidade de sistemas completos.
+            </p>
+          </div>
+          <div className="bg-card rounded-lg border p-6">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-md border p-4">
+                <p className="text-muted-foreground text-sm">
+                  Tempo de entrega
+                </p>
+                <p className="mt-1 font-semibold">Rápido</p>
+              </div>
+              <div className="rounded-md border p-4">
+                <p className="text-muted-foreground text-sm">Customizações</p>
+                <p className="mt-1 font-semibold">Sob medida</p>
+              </div>
+              <div className="rounded-md border p-4">
+                <p className="text-muted-foreground text-sm">Manutenção</p>
+                <p className="mt-1 font-semibold">Descomplicada</p>
+              </div>
+              <div className="rounded-md border p-4">
+                <p className="text-muted-foreground text-sm">Hospedagem</p>
+                <p className="mt-1 font-semibold">Vercel ou sua preferência</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section id="contato" className="container mx-auto px-4 py-12 md:py-16">
+        <div className="bg-card space-y-4 rounded-xl border p-8 text-center md:p-10">
+          <h2 className="text-2xl font-semibold md:text-3xl">
+            Vamos construir sua landing?
+          </h2>
+          <p className="text-muted-foreground">
+            Envie uma mensagem e retornamos com um orçamento objetivo.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button asChild size="lg">
+              <Link href="mailto:contato@pergom.com">contato@pergom.com</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link
+                href="https://wa.me/5500000000000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-auto border-t">
+        <div className="text-muted-foreground container mx-auto flex items-center justify-between px-4 py-6 text-sm">
+          <span>© {new Date().getFullYear()} Pergom</span>
+          <div className="flex gap-4">
+            <Link href="#sobre" className="hover:text-primary">
+              Sobre
+            </Link>
+            <Link href="#contato" className="hover:text-primary">
+              Contato
+            </Link>
+          </div>
+        </div>
       </footer>
-    </div>
-  );
+    </main>
+  )
 }
