@@ -17,7 +17,7 @@ const ButtonSheetHeader = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" className="lg:hidden">
+        <Button variant="ghost" className="text-white lg:hidden">
           <MenuIcon className="size-8" />
         </Button>
       </SheetTrigger>
