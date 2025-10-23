@@ -14,7 +14,7 @@ const itens = [
 
 const HeroSection = () => {
   return (
-    <section className="bg-hero-gradient">
+    <section className="bg-hero-gradient lg:py-12">
       <div className="boxed flex h-[60vh] max-w-[1280px] items-center justify-center">
         <div className="flex h-full flex-1 flex-col justify-around space-y-6 p-4">
           <Title strong="sua" children="marca no próximo nível" />

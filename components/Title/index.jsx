@@ -7,13 +7,13 @@ const Title = ({ children, strong }) => {
         <span className="relative inline-block">
           <strong className="relative z-10">{strong}</strong>
           <Image
-            src="/decor-title.svg"
+            src="/decor.svg"
             alt=""
             aria-hidden="true"
-            width={140}
+            width={150}
             height={20}
             priority
-            className="pointer-events-none absolute top-full left-1/2 mt-[-10px] w-[140px] -translate-x-1/2 md:w-[180px]"
+            className="pointer-events-none absolute top-full left-1/2 mt-[-11px] w-[150px] -translate-x-1/2 md:w-[180px]"
           />
         </span>{" "}
         {children}
