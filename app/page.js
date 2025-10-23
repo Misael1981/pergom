@@ -1,3 +1,4 @@
+import AboutHome from "@/components/AboutHome"
 import ClientsHome from "@/components/ClientsHome"
 import HeroSection from "@/components/HeroSection"
 import OurServicesHome from "@/components/OurServicesHome"
@@ -11,6 +12,8 @@ export default function Home() {
       <OurServicesHome />
       {/* Clients */}
       <ClientsHome />
+      {/* About */}
+      <AboutHome />
     </main>
   )
 }
