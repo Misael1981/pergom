@@ -1,3 +1,4 @@
+import ClientsHome from "@/components/ClientsHome"
 import HeroSection from "@/components/HeroSection"
 import OurServicesHome from "@/components/OurServicesHome"
 
@@ -8,6 +9,8 @@ export default function Home() {
       <HeroSection />
       {/* Our Services */}
       <OurServicesHome />
+      {/* Clients */}
+      <ClientsHome />
     </main>
   )
 }
