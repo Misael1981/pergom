@@ -61,7 +61,7 @@ const Footer = () => {
         </ul>
       </div>
       <Separator className="my-4" />
-      <div className="flex flex-wrap items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between text-xs">
         <div>
           <p className="text-center">
             &copy; {new Date().getFullYear()} Pergom Mídias. Todos os direitos
